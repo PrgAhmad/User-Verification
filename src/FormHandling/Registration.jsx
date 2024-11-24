@@ -27,11 +27,11 @@ export const Registration = () => {
     e.preventDefault();
     if (user.email != "" && user.password != "") {
       alert("Form Submitted");
+      formSubmission(user);
       console.log(user);
     } else {
       alert("Fill The Form");
     }
-    formSubmission(user);
   };
 
   const formSubmission = async (user) => {
@@ -93,6 +93,8 @@ export const Registration = () => {
           value={user.firstName}
           onChange={(e) => handleInputChange(e)}
           placeholder="First Name"
+          required
+          autoComplete="off"
         />
       </div>
       <div className="w-[100%] h-8 flex items-center bg-slate-200 rounded-[10px] px-2">
@@ -104,6 +106,7 @@ export const Registration = () => {
           value={user.lastName}
           onChange={(e) => handleInputChange(e)}
           placeholder="Last Name"
+          autoComplete="off"
         />
       </div>
       <div className="w-[100%] h-8 flex items-center bg-slate-200 rounded-[10px] px-2">
@@ -115,6 +118,8 @@ export const Registration = () => {
           value={user.phoneNumber}
           onChange={(e) => handleInputChange(e)}
           placeholder="Phone Number"
+          required
+          autoComplete="off"
         />
       </div>
       <div className="w-[100%] h-8 flex items-center bg-slate-200 rounded-[10px] px-2">
@@ -126,6 +131,8 @@ export const Registration = () => {
           value={user.email}
           onChange={(e) => handleInputChange(e)}
           placeholder="Email"
+          required
+          autoComplete="off"
         />
       </div>
       <div
@@ -140,6 +147,8 @@ export const Registration = () => {
           value={user.password}
           onChange={(e) => handleInputChange(e)}
           placeholder="Password"
+          required
+          autoComplete="off"
         />
         {hidden ? (
           <TbEye className="eye text-zinc-500 text-2xl" />
