@@ -71,6 +71,7 @@ export const Registration = () => {
 
   return (
     <form
+      autoComplete="off"
       onSubmit={handleForm}
       className="bg-transparent w-[20rem] h-auto rounded-3xl flex justify-center flex-col items-center p-6 shadow-2xl gap-2"
     >
